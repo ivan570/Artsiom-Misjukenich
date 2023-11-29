@@ -1,0 +1,7 @@
+this project call the google search api and search the given text in google api via GET request, and store the
+respective json response in output.json file and render the url and text of the result
+
+to run:
+python app.py
+
+check the demo.mp4 for better understanding

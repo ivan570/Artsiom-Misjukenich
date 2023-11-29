@@ -1,0 +1,13 @@
+Django MQTT Logger:
+This Django app logs incoming MQTT messages. 
+
+
+To run:
+1. Install (paho-mqtt)
+2. configure brocker in settings.py or you can keep it as it is 
+3. python manage.py runserver
+4. and if not make any changes then you can test this via `mosquitto_pub` .
+
+example: mosquitto_pub -h test.mosquitto.org -t test/topic -m "Hello, ivankshu!"
+
+check demo.mp4 for better idea

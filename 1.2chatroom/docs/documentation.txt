@@ -1,0 +1,6 @@
+this applicantion works on web socket to send the message 
+
+please check the demo.mp4 for the demo. 
+
+to run this applicaiton    `daphne chatroom.asgi:application` and 
+then visit http://127.0.0.1:8000/chat/<room_name>/ (for example: http://127.0.0.1:8000/chat/my_chat_room/)

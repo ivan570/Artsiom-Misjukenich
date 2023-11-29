@@ -1,0 +1,26 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}Todo List{% endblock %}
+
+{% block content %}
+  <h2>Todo List</h2>
+  <form method="post" action="{% url 'task_add' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Add Task</button>
+  </form>
+  <ul>
+      {% for task in tasks %}
+          <li>
+              {% if task.completed %}
+                  <del>{{ task.title }}</del>
+              {% else %}
+                  {{ task.title }}
+              {% endif %}
+              <a href="{% url 'task_update' pk=task.pk %}">Update</a>
+              <a href="{% url 'task_delete' pk=task.pk %}">Delete</a>
+              <a href="{% url 'task_mark_done' pk=task.pk %}">Mark as Done</a>
+          </li>
+      {% endfor %}
+  </ul>
+{% endblock %}

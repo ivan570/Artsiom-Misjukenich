@@ -1,0 +1,20 @@
+<html lang="en">
+    <body>
+        <h1>API App</h1>
+        <form method="post" action="{{ url_for('index') }}">
+            <label for="user_input">Enter text:</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if items %}
+        <h2> Search Items:</h2>
+        <ul>
+            {% for item in items %}
+            <li>{{ item['title'] }}</li>
+            <a href="{{ item['link'] }}" > {{ item['link'] }}</a>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,9 @@
+please Find the features that provided by this todo list
+	1. Users can add new tasks to the todo list by clicking on the `add task` button
+	2. Users can delete/update/make as done the tasks by clicking on respective buttons
+
+setps to run the application
+write command `python manage.py runserver` 
+and http://127.0.0.1:8000/ url 
+
+and check demonstration.mp4 to view the demo
